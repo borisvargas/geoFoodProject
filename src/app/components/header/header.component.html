@@ -1,0 +1,179 @@
+<header class="header">
+  <div class="barra">
+    <div
+      class="container"
+      data-spy="scroll"
+      data-target="#navegacion-principal"
+      data-offset="10"
+    >
+      <nav
+        id="navegacion-principal"
+        class="navbar navbar-dark fixed-top justify-content-between navbar-expand-lg bg-transparent"
+      > 
+        <a class="navbar-brand" href="#">geo<span>Food</span></a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav w-100 justify-content-end">
+            <li class="nav-item">
+              <a (click)="toggleCollapse()" class="nav-link" routerLinkActive="active" [routerLink]="['content']">Inicio</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="anunciosdropdown"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+              Servicios
+              </a>
+              <div class="dropdown-menu" aria-labelledby="anunciosdropdown">
+                <a (click)="toggleCollapse()" class="dropdown-item" [routerLink]="['content']">Desayuno</a>
+                <a (click)="toggleCollapse()" class="dropdown-item" [routerLink]="['content']">Almuerzo</a>
+                <a (click)="toggleCollapse()" class="dropdown-item" [routerLink]="['content']">Cena</a>
+                <a (click)="toggleCollapse()" class="dropdown-item" [routerLink]="['content']">Café y té</a>
+                <a (click)="toggleCollapse()" class="dropdown-item" [routerLink]="['content']">Nocturna</a>
+                <a (click)="toggleCollapse()" class="dropdown-item" [routerLink]="['content']">Vegetariana</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a (click)="toggleCollapse()" class="nav-link" [routerLink]="['login']">Entrar</a>
+            </li>
+            <li class="nav-item">
+              <a (click)="toggleCollapse()" class="nav-link" [routerLink]="['signUp']">Registrarse</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!--.container-->
+  </div>
+  <!--.barra -->
+
+  <div
+    id="carouselExampleIndicators"
+    class="carousel slide carousel-fade"
+    data-ride="carousel"
+  >
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li
+        data-target="#carouselExampleIndicators"
+        data-slide-to="0"
+        class="active"
+      ></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="carousel-item">
+        <img
+          class="d-block w-100"
+          src="https://images.unsplash.com/photo-1432958576632-8a39f6b97dc7?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=6ecedc1e639d8a4b77aa8e85f4962f03"
+          data-color="lightblue"
+          alt="First Image"
+        />
+        <div class="carousel-caption d-md-block">
+          <div class="container">
+            <!-- <app-search></app-search>   -->
+            1
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          class="d-block w-100"
+          src="https://images.unsplash.com/photo-1504736038806-94bd1115084e?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=3d045bbf1ecc01c4c9ec011ce5c8977d"
+          data-color="firebrick"
+          alt="Second Image"
+        />
+        <div class="carousel-caption d-md-block">
+          <div class="container">
+            2
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          class="d-block w-100"
+          src="https://images.unsplash.com/photo-1419064642531-e575728395f2?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=76d5c793e4f8d02d7a9be27bc71256f7"
+          data-color="violet"
+          alt="Third Image"/>
+        <div class="carousel-caption d-md-block">
+          <div class="container">
+            3
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          class="d-block w-100"
+          src="https://assets.imgix.net/unsplash/turntable.jpg?auto=compress&w=900&h=600&fit=crop"
+          data-color="violet"
+          alt="Quarter Image"/>
+        <div class="carousel-caption d-md-block">
+          <div class="container">
+            4
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          class="d-block w-100"
+          src="https://assets.imgix.net/unsplash/transport.jpg?auto=compress&w=900&h=600&fit=crop"
+          data-color="violet"
+          alt="Fifth Image"/>
+        <div class="carousel-caption d-md-block">
+          <div class="container">
+            5
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          class="d-block w-100"
+          src="https://assets.imgix.net/unsplash/bridge.jpg?auto=compress&w=900&h=600&fit=crop"
+          data-color="violet"
+          alt="Sixth Image"/>
+        <div class="carousel-caption d-md-block">
+          <div class="container ">
+            6
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Controls -->
+    <a
+      class="carousel-control-prev"
+      href="#carouselExampleIndicators"
+      role="button"
+      data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a
+      class="carousel-control-next"
+      href="#carouselExampleIndicators"
+      role="button"
+      data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</header>

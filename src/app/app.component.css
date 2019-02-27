@@ -1,0 +1,8 @@
+/* https://www.sitepoint.com/full-screen-bootstrap-carousel-random-initial-image/ */
+:root {
+    --primario: #71b100;
+    --secundario: #e08709;
+}
+h1,h2,h3 {
+    font-weight: 300;
+}

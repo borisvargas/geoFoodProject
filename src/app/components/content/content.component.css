@@ -1,0 +1,40 @@
+/* EXPLORADOR - Categorias **/
+.categoria p {
+    opacity: 0;
+    padding-top: 30px;
+    transition: all .3s ease;
+}
+.categoria {
+    overflow: hidden;
+    padding-bottom: 60px;
+    height: calc(auto + 30px);
+}
+.categoria h3::before {
+    content: '';
+    display: block;
+    margin: 0 auto 20px auto;
+    height: 1px;
+    width: 60px;
+    background-color: #00b30c;
+    transition: all .3s ease;
+}
+.categoria:hover h3::before{
+    width: 180px;
+}
+.categoria:hover p {
+    display: block;
+    opacity: 1;
+    padding-top: 10px;
+    color: #999;
+}
+.categoria h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+img {
+    width: 120px;
+    height: auto;
+    min-width: 70px;
+    min-height: auto;
+}

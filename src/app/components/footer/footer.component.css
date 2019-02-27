@@ -1,0 +1,30 @@
+/* FOOTER */
+footer a {
+    font-size: 2em;
+    color: white;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    border-radius: 50%;
+    transition: 0.5s;
+  }
+  footer a:hover {
+      color: #fff;
+      text-decoration: none;
+  }
+  .icon-twitter:hover {
+      background: #1da1f2;
+  }
+  .icon-facebook:hover {
+    background: #3b5998;
+  }
+  .icon-youtube:hover {
+      background: #f00;
+  }
+  .icon-instagram:hover {
+      background: #833ab4;
+  }
+  .icon-whatsapp:hover {
+      background: #075e54;
+  }
