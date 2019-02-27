@@ -10,5 +10,5 @@ La aplicación se volverá a cargar automáticamente si cambia alguno de los arc
 
 ## Servidor online
 
-Vaya a `http://18.191.197.220` para observar el proyecto.
+Vaya a `http://18.225.5.245` para observar el proyecto.
 
