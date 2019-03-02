@@ -1,23 +1,10 @@
 /*  HEADER */
-h5 {
-    display: inline-block;
-    padding: 10px;
-    background: #00AABB;
-    color: white;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-  
 .full-screen {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-.barra {
-    background-color: #71b100;
-}
-
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .barra {
         background-color: transparent;
     }
@@ -34,39 +21,9 @@ h5 {
     position: absolute;
     z-index: 100;
     width: 100%;
-}
-
-.navbar-nav a {
-    text-transform: uppercase;
-}
-.navbar-dark .navbar-nav .nav-link {
-    color: white;
-    font-size: .8rem;
-}
-.dropdown-menu {
-    background-color: #71b100;
-}
-.dropdown-menu .dropdown-item {
-    color: white;
-}
-.dropdown-menu .dropdown-item:hover {
-    background-color: #e08709;
-}
-.navbar-brand {
-    font-size: 2rem;
-    font-weight: 300;
-}
-.navbar-brand span {
-    font-weight: 900;
-}
-.carousel-caption h3 {
-    font-size: 2.4rem;
-}
+} 
 .bloque-info p { 
     font-size: 1.4rem; 
-}
-.bg-success {
-    background-color: #71b100!important;
 }
 .btn-warning {
     background-color: #e08709;
@@ -75,3 +32,8 @@ h5 {
     font-size: 1rem;
     border-color: #e08709;
 }
+*/
+
+/* .carousel-caption h3 {
+    font-size: 2.4rem;
+} */

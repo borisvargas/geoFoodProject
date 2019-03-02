@@ -1,0 +1,27 @@
+/* NAVBAR*/
+.navbar-nav a {
+    text-transform: uppercase;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    font-size: .8rem;
+}
+.dropdown-menu {
+    background-color: #71b100;
+}
+.dropdown-menu .dropdown-item {
+    color: white;
+}
+.dropdown-menu .dropdown-item:hover {
+    background-color: #e08709;
+}
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: 300;
+}
+.navbar-brand span {
+    font-weight: 900;
+}
+.bg-success {
+    background-color: #71b100!important;
+}

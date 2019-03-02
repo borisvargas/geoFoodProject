@@ -11,6 +11,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 // rutas
 import { APP_ROUTING } from './app.routes';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { APP_ROUTING } from './app.routes';
     SearchComponent,
     ContentComponent,
     LoginComponent,
-    SignUpComponent
+    SignUpComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
