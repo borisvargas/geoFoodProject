@@ -2,7 +2,7 @@
         id="navegacion-principal"
         class="navbar navbar-expand navbar-dark fixed-top justify-content-between navbar-expand-lg bg-transparent"
       > 
-        <a (click)="onActivate($event)" class="navbar-brand" href="#" [routerLink]="['content']">geo<span>Food</span></a>
+        <a (click)="onActivate($event)" class="navbar-brand" [routerLink]="['content']">geo<span>Food</span></a>
         <!-- <button
           class="navbar-toggler collapsed"
           type="button"
@@ -14,7 +14,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button> -->
-        <div class="navbar-collapse collapse" id="navbarNavDropdown" [class.show]="show">
+        <div class="navbar-collapse collapse" id="navbarNavDropdown">
           <ul class="navbar-nav w-100 justify-content-end">
             <!-- 
             <li class="nav-item">
