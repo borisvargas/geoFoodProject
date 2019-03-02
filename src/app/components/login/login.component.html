@@ -49,7 +49,7 @@
         </div>
         <div class="txt1 text-center pt-4 pb-2">
             <span>
-              ó <a [routerLink]="['/signUp']" routerLinkActive="router-link-active"  class="txt2">Registrate</a> en geoFood
+              ó <a (click)="toNavlink($event)" [routerLink]="['/signUp']" routerLinkActive="router-link-active"  class="txt2">Registrate</a> en geoFood
             </span>
         </div>
       </form>

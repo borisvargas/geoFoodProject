@@ -58,13 +58,28 @@ export class LoginComponent implements OnInit {
     }
     */
     function showValidate(input) {
-        let thisAlert = $(input).parent();
+        const thisAlert = $(input).parent();
         $(thisAlert).addClass('alert-validate');
     }
     function hideValidate(input) {
-        let thisAlert = $(input).parent();
+        const thisAlert = $(input).parent();
         $(thisAlert).removeClass('alert-validate');
     }
+  }
+  // funcion para ir al lugar especifico
+  toNavlink(event) {
+    const scrollToTop: number = window.setInterval(() => {
+        const pos: number = window.pageYOffset;
+        if (pos <= 577) {
+            window.scrollTo(0, pos + 20);
+        } else {
+          if (pos > 597) {
+            window.scrollTo(0, pos - 20);
+          } else {
+            window.clearInterval(scrollToTop);
+          }
+        }
+    }, 16);
   }
 
 }

@@ -6,13 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  show: Boolean = false;
   constructor() { }
 
   ngOnInit() {
     // ocultar y aparecer
     window.onscroll = function (e) {
-      let scroll = window.scrollY;
+      const scroll: number = window.scrollY;
       const headerScroll = document.querySelector('#navegacion-principal');
       if (scroll > 200) {
           headerScroll.classList.add('bg-success');
@@ -21,11 +20,30 @@ export class NavbarComponent implements OnInit {
       }
     };
   }
-  // funcion para ocultar toggler
-  toggleCollapse() {
-    this.show = !this.show;
+  // metodo para ir arriba en el cambio de pagina
+  onActivate(event) {
+    const scrollToTop: number = window.setInterval(() => {
+        const pos: number = window.pageYOffset;
+        if (pos > 0) {
+            window.scrollTo(0, pos - 20);
+        } else {
+            window.clearInterval(scrollToTop);
+        }
+    }, 16);
   }
-  toggleOff() {
-    this.show = false;
+  toNavlink(event) {
+    const scrollToTop: number = window.setInterval(() => {
+        const pos: number = window.pageYOffset;
+        if (pos <= 577) {
+            window.scrollTo(0, pos + 20);
+        } else {
+          if (pos > 597) {
+            window.scrollTo(0, pos - 20);
+          } else {
+            window.clearInterval(scrollToTop);
+          }
+        }
+    }, 16);
   }
+
 }

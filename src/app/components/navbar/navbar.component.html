@@ -2,7 +2,7 @@
         id="navegacion-principal"
         class="navbar navbar-expand navbar-dark fixed-top justify-content-between navbar-expand-lg bg-transparent"
       > 
-        <a (click)="toggleOff()" class="navbar-brand" href="#" [routerLink]="['content']">geo<span>Food</span></a>
+        <a (click)="onActivate($event)" class="navbar-brand" href="#" [routerLink]="['content']">geo<span>Food</span></a>
         <!-- <button
           class="navbar-toggler collapsed"
           type="button"
@@ -42,10 +42,10 @@
             </li>
             -->
             <li class="nav-item">
-              <a (click)="toggleCollapse()" class="nav-link" routerLinkActive="active" [routerLink]="['login']">Entrar</a>
+              <a (click)="toNavlink($event)" class="nav-link" routerLinkActive="active" [routerLink]="['login']">Entrar</a>
             </li>
             <li class="nav-item">
-              <a (click)="toggleCollapse()" class="nav-link" routerLinkActive="active" [routerLink]="['signUp']">Registrarse</a>
+              <a (click)="toNavlink($event)" class="nav-link" routerLinkActive="active" [routerLink]="['signUp']">Registrarse</a>
             </li>
           </ul>
         </div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
-import * as bootstrap from 'bootstrap';
+// import * as bootstrap from 'bootstrap';
 
 @Component({
   selector: 'app-header',
@@ -12,14 +12,14 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     // fondo completo carouse
-    let $item = $('.carousel-item');
+    const $item = $('.carousel-item');
     let $wHeight = $(window).height();
     $item.eq(0).addClass('active');
     $item.height($wHeight);
     $item.addClass('full-screen');
     $('.carousel img').each(function() {
-      let $src = $(this).attr('src');
-      let $color = $(this).attr('data-color');
+      const $src = $(this).attr('src');
+      const $color = $(this).attr('data-color');
       $(this).parent().css({
         'background-image' : 'url(' + $src + ')',
         'background-color' : $color
@@ -30,10 +30,11 @@ export class HeaderComponent implements OnInit {
       $wHeight = $(window).height();
       $item.height($wHeight);
     });
-
-    $('.carousel').carousel({
-      interval: 6000,
-      pause: false
+    /*
+     $('.carousel').carousel({
+       interval: 6000,
+       pause: false
     });
+    */
   }
 }
