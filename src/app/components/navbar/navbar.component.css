@@ -25,3 +25,10 @@
 .bg-success {
     background-color: #71b100!important;
 }
+.active {
+    background-color: #e08709;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    border-color: #e08709;
+}
