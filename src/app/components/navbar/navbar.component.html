@@ -2,7 +2,7 @@
         id="navegacion-principal"
         class="navbar navbar-dark fixed-top justify-content-between navbar-expand-lg bg-transparent"
       > 
-        <a class="navbar-brand" href="#">geo<span>Food</span></a>
+        <a (click)="toggleCollapse()" class="navbar-brand" href="#" [routerLink]="['content']">geo<span>Food</span></a>
 
         <button
           class="navbar-toggler"
@@ -17,6 +17,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav w-100 justify-content-end">
+            <!-- 
             <li class="nav-item">
               <a (click)="toggleCollapse()" class="nav-link" routerLinkActive="active" [routerLink]="['content']">Inicio</a>
             </li>
@@ -40,6 +41,7 @@
                 <a (click)="toggleCollapse()" class="dropdown-item" [routerLink]="['content']">Vegetariana</a>
               </div>
             </li>
+            -->
             <li class="nav-item">
               <a (click)="toggleCollapse()" class="nav-link" [routerLink]="['login']">Entrar</a>
             </li>
