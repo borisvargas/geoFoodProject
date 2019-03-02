@@ -28,5 +28,4 @@ export class NavbarComponent implements OnInit {
   toggleOff() {
     this.show = false;
   }
-
 }
