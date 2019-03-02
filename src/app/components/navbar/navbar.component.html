@@ -1,11 +1,10 @@
       <nav
         id="navegacion-principal"
-        class="navbar navbar-dark fixed-top justify-content-between navbar-expand-lg bg-transparent"
+        class="navbar navbar-expand navbar-dark fixed-top justify-content-between navbar-expand-lg bg-transparent"
       > 
-        <a (click)="toggleCollapse()" class="navbar-brand" href="#" [routerLink]="['content']">geo<span>Food</span></a>
-
-        <button
-          class="navbar-toggler"
+        <a (click)="toggleOff()" class="navbar-brand" href="#" [routerLink]="['content']">geo<span>Food</span></a>
+        <!-- <button
+          class="navbar-toggler collapsed"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNavDropdown"
@@ -14,8 +13,8 @@
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        </button> -->
+        <div class="navbar-collapse collapse" id="navbarNavDropdown" [class.show]="show">
           <ul class="navbar-nav w-100 justify-content-end">
             <!-- 
             <li class="nav-item">
@@ -43,10 +42,10 @@
             </li>
             -->
             <li class="nav-item">
-              <a (click)="toggleCollapse()" class="nav-link" [routerLink]="['login']">Entrar</a>
+              <a (click)="toggleCollapse()" class="nav-link" routerLinkActive="active" [routerLink]="['login']">Entrar</a>
             </li>
             <li class="nav-item">
-              <a (click)="toggleCollapse()" class="nav-link" [routerLink]="['signUp']">Registrarse</a>
+              <a (click)="toggleCollapse()" class="nav-link" routerLinkActive="active" [routerLink]="['signUp']">Registrarse</a>
             </li>
           </ul>
         </div>
