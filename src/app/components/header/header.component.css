@@ -3,6 +3,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    height: 50%;
 }
 /* @media (min-width: 768px) {
     .barra {
