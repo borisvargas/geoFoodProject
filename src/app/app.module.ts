@@ -17,6 +17,7 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { ExploreComponent } from './components/explore/explore.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AngularFireAuth } from '@angular/fire/auth';
     ContentComponent,
     LoginComponent,
     SignUpComponent,
-    NavbarComponent
+    NavbarComponent,
+    ExploreComponent
   ],
   imports: [
     BrowserModule,

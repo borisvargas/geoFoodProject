@@ -3,6 +3,7 @@ import * as $ from 'jquery';
 import * as bootstrap from 'bootstrap';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ import { auth } from 'firebase/app';
 })
 export class LoginComponent implements OnInit {
 
-  constructor( public afAuth: AngularFireAuth ) { }
+  constructor( public afAuth: AngularFireAuth, private router: Router ) { }
 
   ngOnInit() {
        /*[ Focus input ]*/
@@ -85,6 +86,8 @@ export class LoginComponent implements OnInit {
   }
   onLoginGoogle() {
     this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
+    this.router.navigate(['explore']); // todo: verificar
+
   }
   logout() {
     this.afAuth.auth.signOut();
