@@ -7,12 +7,19 @@
         </span>
         <div class="wrap-input100 validate-input mb-2 pt-3" data-validate = "Username is required">
           <span class="label-input100">Email o número de teléfono:</span>
-          <input class="input100" type="text" placeholder="Escribe tu email o número de telefono">
+          <input 
+            class="input100" 
+            type="text" 
+            placeholder="Escribe tu email o número de telefono"
+            >
           <span class="focus-input100" data-symbol="&#xf206;"></span>
         </div>
         <div class="wrap-input100 validate-input" data-validate="Password is required">
           <span class="label-input100">Contraseña:</span>
-          <input class="input100" type="password" placeholder="Escribe tu contraseña">
+          <input 
+            class="input100" 
+            type="password" 
+            placeholder="Escribe tu contraseña">
           <span class="focus-input100" data-symbol="&#xf190;"></span>
         </div>
         <div class="text-right pt-1 pb-3">
@@ -42,7 +49,7 @@
             <a href="#" class="login100-social-item bg2">
               <i class="fa fa-twitter"></i>
             </a>
-            <a href="#" class="login100-social-item bg3">
+            <a (click)="onLoginGoogle()" href="" class="login100-social-item bg3">
               <i class="fa fa-google"></i>
             </a>
           </div>

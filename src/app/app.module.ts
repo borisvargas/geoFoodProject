@@ -12,6 +12,11 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 // rutas
 import { APP_ROUTING } from './app.routes';
 import { NavbarComponent } from './components/navbar/navbar.component';
+// firebase
+import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -26,9 +31,14 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    APP_ROUTING
+    APP_ROUTING,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule
   ],
-  providers: [],
+  providers: [
+    AngularFireAuth
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -42,10 +42,10 @@
             </li>
             -->
             <li class="nav-item">
-              <a (click)="toNavlink($event)" class="nav-link" routerLinkActive="active" [routerLink]="['login']">Entrar</a>
+              <a (click)="toNavlink($event)" class="nav-link" *ngIf="!isLogged" routerLinkActive="active" [routerLink]="['login']">Entrar</a>
             </li>
             <li class="nav-item">
-              <a (click)="toNavlink($event)" class="nav-link" routerLinkActive="active" [routerLink]="['signUp']">Registrarse</a>
+              <a (click)="toNavlink($event)" class="nav-link" *ngIf="!isLogged" routerLinkActive="active" [routerLink]="['signUp']">Registrarse</a>
             </li>
           </ul>
         </div>

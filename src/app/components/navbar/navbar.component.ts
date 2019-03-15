@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  public isLogged: boolean = false;
   constructor() { }
 
   ngOnInit() {
@@ -46,5 +47,4 @@ export class NavbarComponent implements OnInit {
         }
     }, 16);
   }
-
 }
