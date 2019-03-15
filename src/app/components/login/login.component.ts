@@ -89,6 +89,11 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['explore']); // todo: verificar
 
   }
+  onLoginFacebook() {
+    console.log('entro');
+    this.afAuth.auth.signInWithPopup(new auth.FacebookAuthProvider());
+    this.router.navigate(['explore']); // todo: verificar
+  }
   logout() {
     this.afAuth.auth.signOut();
   }

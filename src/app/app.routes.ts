@@ -10,7 +10,7 @@ const APP_ROUTES: Routes = [
     { path: 'content', component: ContentComponent },
     { path: 'login', component: LoginComponent},
     { path: 'signUp', component: SignUpComponent},
-    { path: 'explore', component: ExploreComponent }
+    { path: 'explore', component: ExploreComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'content' }
 ];
 export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES);

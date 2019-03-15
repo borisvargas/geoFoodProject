@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-// import { RouterLinkActive } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-navbar',
@@ -8,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   public isLogged: boolean = false;
-  constructor() { }
+  constructor( private authService: AuthService, private afsAuth: AngularFireAuth ) { }
 
   ngOnInit() {
+    this.getCurrentUser(); // para comprabar si esta loggeado
     // ocultar y aparecer
     window.onscroll = function (e) {
       const scroll: number = window.scrollY;
@@ -46,5 +48,19 @@ export class NavbarComponent implements OnInit {
           }
         }
     }, 16);
+  }
+  getCurrentUser() {
+    this.authService.isAuth().subscribe( auth => {
+      if (auth) {
+        console.log('ussr logged');
+        this.isLogged = true;
+      } else {
+        console.log('NOT user logged');
+        this.isLogged = false;
+      }
+    });
+  }
+  onLogout() {
+    this.afsAuth.auth.signOut();
   }
 }
