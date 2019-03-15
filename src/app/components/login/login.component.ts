@@ -85,14 +85,20 @@ export class LoginComponent implements OnInit {
     }, 16);
   }
   onLoginGoogle() {
-    this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
-    this.router.navigate(['explore']); // todo: verificar
-
+    this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider()).then(userdata => {
+      console.log(userdata);
+      this.router.navigate(['explore']); // todo: verificar
+      return;
+    });
+    this.router.navigate(['content']);
   }
   onLoginFacebook() {
-    console.log('entro');
-    this.afAuth.auth.signInWithPopup(new auth.FacebookAuthProvider());
-    this.router.navigate(['explore']); // todo: verificar
+    this.afAuth.auth.signInWithPopup(new auth.FacebookAuthProvider()).then(userdata => {
+      console.log(userdata);
+      this.router.navigate(['explore']); // todo: verificar
+      return;
+    });
+    this.router.navigate(['content']);
   }
   logout() {
     this.afAuth.auth.signOut();
