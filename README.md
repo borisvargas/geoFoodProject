@@ -27,8 +27,6 @@ Complementos para manejo del mapa
 
 `npm install @agm/core --save`
 
-
-
 ## Servidor online
 
 Vaya a `http://13.59.16.184` para observar el proyecto.
