@@ -16,8 +16,16 @@ npm install --save popper.js
 
 Complementos para usar codigo Jquery en Angular
 
-npm install --save-dev @types/jquery
-npm install --save-dev @types/bootstrap
+`npm install --save-dev @types/jquery`
+`npm install --save-dev @types/bootstrap`
+
+Complementos para la base de datos
+
+`npm install firebase @angular/fire --save`
+
+Complementos para manejo de la API de FourSquare
+
+
 
 ## Servidor online
 

@@ -8,6 +8,7 @@ import { SearchComponent } from './components/search/search.component';
 import { ContentComponent } from './components/content/content.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { ExploreComponent } from './components/explore/explore.component';
 
 // rutas
 import { APP_ROUTING } from './app.routes';
@@ -17,7 +18,6 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { ExploreComponent } from './components/explore/explore.component';
 
 @NgModule({
   declarations: [

@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import * as bootstrap from 'bootstrap';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { auth } from 'firebase/app';
 import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -11,8 +11,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  constructor( public afAuth: AngularFireAuth, private router: Router ) { }
+  public nombre: String;
+  public email: String;
+  constructor( public afAuth: AngularFireAuth, private router: Router, private authService: AuthService ) { }
 
   ngOnInit() {
        /*[ Focus input ]*/
@@ -84,24 +85,20 @@ export class LoginComponent implements OnInit {
       }
     }, 16);
   }
-  onLoginGoogle() {
-    this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider()).then(userdata => {
-      console.log(userdata);
-      this.router.navigate(['explore']); // todo: verificar
-      return;
-    });
-    this.router.navigate(['content']);
+  onLoginGoogle(): void {
+    this.authService.loginGoogleUser().then( res => {
+      console.log('userRes', res);
+      this.router.navigate(['explore']);
+    }).catch( err => console.log('err', err));
   }
-  onLoginFacebook() {
-    this.afAuth.auth.signInWithPopup(new auth.FacebookAuthProvider()).then(userdata => {
-      console.log(userdata);
-      this.router.navigate(['explore']); // todo: verificar
-      return;
-    });
-    this.router.navigate(['content']);
-  }
-  logout() {
-    this.afAuth.auth.signOut();
+  onLoginFacebook(): void {
+    this.authService.loginFacebookUser().then( res => {
+      console.log('res', res);
+      this.router.navigate(['explore']);
+    }).catch( err => console.log('err', err));
   }
 
+  onLogout() {
+    this.authService.logoutUser();
+  }
 }

@@ -43,20 +43,20 @@
 
         <div class="container">
           <div class="row text-center">
-            <button class="login100-social-item bg1" (click)="onLoginFacebook()">
+            <button type="button"class="login100-social-item bg1" (click)="onLoginFacebook()">
               <i class="fa fa-facebook"></i>
             </button>
-            <button class="login100-social-item bg2">
+            <button type="button" class="login100-social-item bg2">
               <i class="fa fa-twitter"></i>
             </button>
-            <button class="login100-social-item bg3" (click)="onLoginGoogle()">
+            <button type="button" class="login100-social-item bg3" (click)="onLoginGoogle()">
               <i class="fa fa-google"></i>
             </button>
           </div>
         </div>
         <div class="txt1 text-center pt-4 pb-2">
             <span>
-              ó <a (click)="toNavlink($event)" [routerLink]="['/signUp']" routerLinkActive="router-link-active"  class="txt2">Registrate</a> en geoFood
+              ó <a (click)="toNavlink($event)" [routerLink]="['signUp']" routerLinkActive="active"  class="txt2">Registrate</a> en geoFood
             </span>
         </div>
       </form>

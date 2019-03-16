@@ -8,7 +8,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  public isLogged: boolean = false;
+  public isLogged: Boolean = false;
   constructor( private authService: AuthService, private afsAuth: AngularFireAuth ) { }
 
   ngOnInit() {
@@ -49,10 +49,11 @@ export class NavbarComponent implements OnInit {
         }
     }, 16);
   }
+  // si esta loggeado
   getCurrentUser() {
     this.authService.isAuth().subscribe( auth => {
       if (auth) {
-        console.log('ussr logged');
+        console.log('user logged');
         this.isLogged = true;
       } else {
         console.log('NOT user logged');
