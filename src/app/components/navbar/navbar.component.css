@@ -32,3 +32,8 @@
     font-size: 1rem;
     border-color: #e08709;
 }
+.fondito {
+    -webkit-box-shadow: 1px 1px 1px #71b100;
+    -moz-box-shadow: 1px 1px 1px #71b100;
+    filter: shadow(color=#71b100, direction=135, strength=2);
+}
