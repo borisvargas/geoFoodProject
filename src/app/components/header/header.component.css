@@ -5,7 +5,7 @@
     background-repeat: no-repeat;
     height: 50%;
 }
-/* @media (min-width: 768px) {
+ @media (min-width: 768px) {
     .barra {
         background-color: transparent;
     }
@@ -33,8 +33,7 @@
     font-size: 1rem;
     border-color: #e08709;
 }
-*/
 
-/* .carousel-caption h3 {
+carousel-caption h3 {
     font-size: 2.4rem;
-} */
+} 

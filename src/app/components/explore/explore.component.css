@@ -1,7 +1,98 @@
 agm-map {
-    height: 300px;
+  height: 505px;
 }
 .mapa {
-    padding-top: 3px;
-    padding-bottom: 5px;
+  padding-top: 3px;
+  padding-bottom: 5px;
+}
+.head {
+  float: left;
+  width: 100%;
+}
+.search-box {
+  width: 90%;
+  margin: 0 auto 40px;
+  box-shadow: 10px 13px 0 rgba(0, 0, 0, 0.2);
+}
+.listing-block {
+  background: #fff;
+  height: 505px;
+  padding-top: 20px;
+  overflow-y: scroll;
+}
+.slimScrollDiv {
+  width: 41% !important;
+}
+.media {
+  background: #fff;
+  position: relative;
+  margin-bottom: 15px;
+}
+.media img {
+  width: 200px;
+  margin: 0;
+  height: 136px;
+}
+.media-body {
+  border: 1px solid #bcbcbc;
+  border-left: 0;
+  height: 136px;
+}
+.media .price {
+  float: left;
+  width: 100%;
+  font-size: 30px;
+  font-weight: 600;
+  color: #4765ab;
+}
+.media .price small {
+  display: block;
+  font-size: 17px;
+  color: #232323;
+}
+.media .stats {
+  float: left;
+  width: 100%;
+  margin-top: 10px;
+}
+.media .stats span {
+  float: left;
+  margin-right: 10px;
+  font-size: 15px;
+}
+.media .stats span i {
+  margin-right: 7px;
+  color: #4765ab;
+}
+.media .address {
+  float: left;
+  width: 100%;
+  font-size: 14px;
+  margin-top: 5px;
+  color: #888;
+}
+.media .fav-box {
+  position: absolute;
+  right: 10px;
+  font-size: 20px;
+  top: 4px;
+  color: #e74c3c;
+}
+.map-box {
+  background-color: #a3ccff;
+}
+/* BUSCADOR */
+.form-control-borderless {
+    border: none;
+}
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.btn-warning {
+  background-color: #e08709;
+  color: white;
+  font-size: 1rem;
+  border-color: #e08709;
 }

@@ -19,6 +19,7 @@ export class ExploreComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.toNavlink();
   }
   /*
   loadData() {
@@ -32,7 +33,7 @@ export class ExploreComponent implements OnInit {
     });
   }
   */
- toNavlink(event) {
+ toNavlink() {
   const scrollToTop: number = window.setInterval(() => {
       const pos: number = window.pageYOffset;
       if (pos <= 597) {
