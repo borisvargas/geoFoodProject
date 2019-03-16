@@ -28,5 +28,19 @@ export class ExploreComponent implements OnInit {
     });
   }
   */
+ toNavlink(event) {
+  const scrollToTop: number = window.setInterval(() => {
+      const pos: number = window.pageYOffset;
+      if (pos <= 597) {
+        window.scrollTo(0, pos + 20);
+      } else {
+      if (pos > 617) {
+        window.scrollTo(0, pos - 20);
+      } else {
+        window.clearInterval(scrollToTop);
+      }
+    }
+  }, 16);
+}
 
 }
