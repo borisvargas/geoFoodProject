@@ -18,6 +18,8 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuth } from '@angular/fire/auth';
+// modal
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     APP_ROUTING,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule

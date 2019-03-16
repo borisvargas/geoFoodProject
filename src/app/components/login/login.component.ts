@@ -11,8 +11,13 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  public nombre: String;
-  public email: String;
+  public nombre: string = '';
+  public apellido: string = '';
+  public correo: string = '';
+  public image: string = '';
+
+  public email: string = '';
+  public password: string = '';
   constructor( public afAuth: AngularFireAuth, private router: Router, private authService: AuthService ) { }
 
   ngOnInit() {
@@ -85,17 +90,31 @@ export class LoginComponent implements OnInit {
       }
     }, 16);
   }
+
+  onLogin(): void {
+    this.authService.loginEmailUser(this.email, this.password).then( res => {
+      this.router.navigate(['explore']);
+    }).catch( err => console.log('err', err.message));
+  }
+
   onLoginGoogle(): void {
     this.authService.loginGoogleUser().then( res => {
-      console.log('userRes', res);
+      this.correo = res.additionalUserInfo.profile['email'];
+      this.apellido = res.additionalUserInfo.profile['family_name'];
+      this.nombre = res.additionalUserInfo.profile['given_name'];
+      this.image = res.additionalUserInfo.profile['picture'];
+      // console.log('userRes', res);
       this.router.navigate(['explore']);
-    }).catch( err => console.log('err', err));
+    }).catch( err => console.log('err', err.message));
   }
   onLoginFacebook(): void {
     this.authService.loginFacebookUser().then( res => {
-      console.log('res', res);
+      this.correo = res.additionalUserInfo.profile['email'];
+      this.apellido = res.additionalUserInfo.profile['last_name'];
+      this.nombre = res.additionalUserInfo.profile['first_name'];
+      // console.log('res', res);
       this.router.navigate(['explore']);
-    }).catch( err => console.log('err', err));
+    }).catch( err => console.log('err', err.mesagge));
   }
 
   onLogout() {
