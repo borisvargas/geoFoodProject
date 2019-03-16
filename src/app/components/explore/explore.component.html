@@ -3,8 +3,12 @@
     <div class="col-md-6">
       BUSCADOR
     </div>
-    <div class="col-md-6">
-      MAPA
+    <div class="col-md-12 col-lg-6 mapa">
+      <!-- GOOGLE MAP -->
+        <h3>Google Map</h3>
+        <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+            <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>
     </div>
   </div>
 </div>

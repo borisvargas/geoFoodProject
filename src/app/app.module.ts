@@ -20,6 +20,9 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuth } from '@angular/fire/auth';
 // modal
 import {FormsModule} from '@angular/forms';
+// googleMap
+import { AgmCoreModule } from '@agm/core';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +41,8 @@ import {FormsModule} from '@angular/forms';
     FormsModule,
     APP_ROUTING,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AgmCoreModule.forRoot({ apiKey: 'AIzaSyBNRWW7vqg8E6TPvFFc3Tq6Exhga8U3dAU' }),
   ],
   providers: [
     AngularFireAuth

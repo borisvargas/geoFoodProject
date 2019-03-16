@@ -12,6 +12,10 @@ export class ExploreComponent implements OnInit {
   public server: String = 'https://api.foursquare.com/v2/venues/explore';
   public query: String = 'client_id=' + this.clientID + '&client_secret=' + this.clientSecret + '&v=20180323&limit=1&ll=40.7243,-74.0018&query=coffee';
   */
+ // datos google map
+ public lat: number = -16.488653;
+ public lng: number = -68.141724;
+ public zoom: number = 16.2;
   constructor() { }
 
   ngOnInit() {

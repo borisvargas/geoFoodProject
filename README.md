@@ -23,7 +23,9 @@ Complementos para la base de datos
 
 `npm install firebase @angular/fire --save`
 
-Complementos para manejo de la API de FourSquare
+Complementos para manejo del mapa
+
+`npm install @agm/core --save`
 
 
 
