@@ -93,7 +93,7 @@ export class LoginComponent implements OnInit {
 
   onLogin(): void {
     this.authService.loginEmailUser(this.email, this.password).then( res => {
-      this.router.navigate(['explore']);
+      this.onLoginRedirect();
     }).catch( err => console.log('err', err.message));
   }
 
@@ -104,7 +104,7 @@ export class LoginComponent implements OnInit {
       this.nombre = res.additionalUserInfo.profile['given_name'];
       this.image = res.additionalUserInfo.profile['picture'];
       // console.log('userRes', res);
-      this.router.navigate(['explore']);
+      this.onLoginRedirect();
     }).catch( err => console.log('err', err.message));
   }
   onLoginFacebook(): void {
@@ -113,11 +113,15 @@ export class LoginComponent implements OnInit {
       this.apellido = res.additionalUserInfo.profile['last_name'];
       this.nombre = res.additionalUserInfo.profile['first_name'];
       // console.log('res', res);
-      this.router.navigate(['explore']);
+      this.onLoginRedirect();
     }).catch( err => console.log('err', err.mesagge));
   }
 
   onLogout() {
     this.authService.logoutUser();
+  }
+
+  onLoginRedirect(): void {
+    this.router.navigate(['explore']);
   }
 }

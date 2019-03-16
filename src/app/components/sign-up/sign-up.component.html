@@ -1,69 +1,96 @@
 <div class="limiter">
-    <div class="container-login100 pt-5">
-      <div class="wrap-login100 pl-5 pr-5 pt-3 pb-2">
-        <form class="login100-form validate-form">
-          <span class="login100-form-title">
-            Registrate
+  <div class="container-login100 pt-5">
+    <div class="wrap-login100 pl-5 pr-5 pt-3 pb-2">
+      <form class="login100-form validate-form" (ngSubmit)="onAddUser()">
+        <span class="login100-form-title">
+          Registrate
+        </span>
+
+        <div
+          class="wrap-input100 validate-input mb-2 pt-3"
+          data-validate="Email is required"
+        >
+          <span class="label-input100">Email</span>
+          <input [(ngModel)]="email" id="email" name="email" class="input100" type="text" placeholder="Escribe tu email" required/>
+          <span class="focus-input100" data-symbol="&#xf206;"></span>
+        </div>
+
+        <div
+          class="wrap-input100 validate-input mb-2 pt-3"
+          data-validate="number is required"
+        >
+          <span class="label-input100">Número de teléfono:</span>
+          <input class="input100" type="text" placeholder="+591 60514138" />
+          <span class="focus-input100" data-symbol="&#xf202;"></span>
+        </div>
+
+        <div
+          class="wrap-input100 validate-input mb-2 pt-3"
+          data-validate="name is required"
+        >
+          <span class="label-input100">Nombre: </span>
+          <input class="input100" type="text" placeholder="Escribe tu nombre" />
+          <span class="focus-input100" data-symbol="&#xf205;"></span>
+        </div>
+
+        <div
+          class="wrap-input100 validate-input mb-2 pt-3"
+          data-validate="last name is required"
+        >
+          <span class="label-input100">Apellido: </span>
+          <input
+            class="input100"
+            type="text"
+            placeholder="Escribe tu apellido"
+          />
+          <span class="focus-input100 " data-symbol="&#xf204;"></span>
+        </div>
+
+        <div
+          class="wrap-input100 validate-input"
+          data-validate="Password is required"
+        >
+          <span class="label-input100">Contraseña:</span>
+          <input
+            [(ngModel)]="password"
+            id="password"
+            name="password"
+            class="input100"
+            type="password"
+            placeholder="Escribe tu contraseña"
+            required
+          />
+          <span class="focus-input100" data-symbol="&#xf190;"></span>
+        </div>
+
+        <div class="container-login100-form-btn pt-3">
+          <div class="wrap-login100-form-btn">
+            <div class="login100-form-bgbtn"></div>
+            <button type="submit" class="login100-form-btn">
+              Registrarse
+            </button>
+          </div>
+        </div>
+        <div class="txt1 text-center pt-4 pb-2">
+          <span>
+            ó registrese usando
           </span>
+        </div>
 
-          <div class="wrap-input100 validate-input mb-2 pt-3" data-validate = "Email is required">
-            <span class="label-input100">Email</span>
-            <input class="input100" type="text" placeholder="Escribe tu email">
-            <span class="focus-input100" data-symbol="&#xf206;"></span>
+        <div class="container">
+          <div class="row text-center">
+            <button type="button" class="login100-social-item bg1" (click)="onLoginFacebook()">
+              <i class="fa fa-facebook"></i>
+            </button>
+            <button type="button" class="login100-social-item bg2">
+              <i class="fa fa-twitter"></i>
+            </button>
+            <button type="button" class="login100-social-item bg3" (click)="onLoginGoogle()">
+              <i class="fa fa-google"></i>
+            </button>
           </div>
-
-          <div class="wrap-input100 validate-input mb-2 pt-3" data-validate = "number is required">
-            <span class="label-input100">Número de teléfono:</span>
-            <input class="input100" type="text" placeholder="+591 60514138">
-            <span class="focus-input100" data-symbol="&#xf202;"></span>
-          </div>
-
-          <div class="wrap-input100 validate-input mb-2 pt-3" data-validate = "name is required">
-            <span class="label-input100">Nombre: </span>
-            <input class="input100" type="text" placeholder="Escribe tu nombre">
-            <span class="focus-input100" data-symbol="&#xf205;"></span>
-          </div>
-
-          <div class="wrap-input100 validate-input mb-2 pt-3" data-validate = "last name is required">
-            <span class="label-input100">Apellido: </span>
-            <input class="input100" type="text" placeholder="Escribe tu apellido">
-            <span class="focus-input100 " data-symbol="&#xf204;"></span>
-          </div>
-          
-          <div class="wrap-input100 validate-input" data-validate="Password is required">
-            <span class="label-input100">Contraseña:</span>
-            <input class="input100" type="password" placeholder="Escribe tu contraseña">
-            <span class="focus-input100" data-symbol="&#xf190;"></span>
-          </div>
-          
-          <div class="container-login100-form-btn pt-3">
-            <div class="wrap-login100-form-btn">
-              <div class="login100-form-bgbtn"></div>
-              <button class="login100-form-btn">
-                Registrarse
-              </button>
-            </div>
-          </div>
-          <div class="txt1 text-center pt-4 pb-2">
-            <span>
-              ó registrese usando
-            </span>
-          </div>
-  
-          <div class="container">
-            <div class="row text-center">
-              <a href="#" class="login100-social-item bg1">
-                <i class="fa fa-facebook"></i>
-              </a>
-              <a href="#" class="login100-social-item bg2">
-                <i class="fa fa-twitter"></i>
-              </a>
-              <a href="#" class="login100-social-item bg3">
-                <i class="fa fa-google"></i>
-              </a>
-            </div>
-          </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   </div>
+</div>
