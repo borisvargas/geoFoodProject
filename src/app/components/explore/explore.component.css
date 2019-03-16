@@ -29,7 +29,7 @@ agm-map {
   margin-bottom: 15px;
 }
 .media img {
-  width: 200px;
+  width: 136px;
   margin: 0;
   height: 136px;
 }
@@ -41,7 +41,7 @@ agm-map {
 .media .price {
   float: left;
   width: 100%;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 600;
   color: #4765ab;
 }
