@@ -3,7 +3,7 @@ import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { finalize } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/internal/Observable';
 
 @Component({
   selector: 'app-sign-up',
@@ -13,12 +13,14 @@ import { Observable } from 'rxjs';
 export class SignUpComponent implements OnInit {
 
   constructor(private router: Router, private authService: AuthService, private storage: AngularFireStorage ) { }
+
+  @ViewChild('imageUser') inputImageUser: ElementRef;
+
   public nombre: string = '';
   public apellido: string = '';
   public correo: string = '';
   public image: string = '';
-
-  @ViewChild('imageUser') inputImageUser: ElementRef;
+  public phone: string = '';
 
   public email: string = '';
   public password: string = '';
@@ -42,11 +44,13 @@ export class SignUpComponent implements OnInit {
     this.authService.registerUser(this.email, this.password).then( res => {
       // console.log('userRes', res);
       this.authService.isAuth().subscribe( user => {
-        if(user) {
+        if (user) {
           user.updateProfile({
-            displayName: '',
+            displayName: this.nombre + ' ' + this.apellido,
             photoURL: this.inputImageUser.nativeElement.value
-          }).then( () => { this.onLoginRedirect(); }).catch((error) => console.log(error));
+          }).then( () => {
+            this.onLoginRedirect();
+          }).catch((error) => console.log(error));
         }
       });
     }).catch( err => console.log('err', err.message) );

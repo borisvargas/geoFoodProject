@@ -48,7 +48,7 @@
               <a (click)="toNavlink($event)" class="nav-link fondito" *ngIf="!isLogged" routerLinkActive="active" [routerLink]="['signUp']">Registrarse</a>
             </li>
             <li class="nav-item">
-                <a (click)="onLogout()" class="nav-link fondito" *ngIf="isLogged" [routerLink]="['profile']">Profile</a>
+                <a class="nav-link fondito" *ngIf="isLogged" [routerLink]="['profile']">Profile</a>
               </li>
             <li class="nav-item">
               <a (click)="onLogout()" class="nav-link fondito" *ngIf="isLogged" [routerLink]="['/']">Salir</a>

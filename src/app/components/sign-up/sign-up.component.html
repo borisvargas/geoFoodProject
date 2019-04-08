@@ -20,7 +20,7 @@
           data-validate="number is required"
         >
           <span class="label-input100">Número de teléfono:</span>
-          <input class="input100" type="text" placeholder="+591 60514138" />
+          <input  [(ngModel)]="phoneNumber" name="phoneNumber" id="phoneNumber" class="input100" type="text" placeholder="+591 60514138" />
           <span class="focus-input100" data-symbol="&#xf202;"></span>
         </div>
 
@@ -29,7 +29,7 @@
             <span class="label-input100">Imagen : </span>
             <input class="input100" type="file" accept=".png, .jpg" (change)="onUpLoad($event)">
           </div>
-          <input #imageUser type="hidden" [value]="urlImage | async">
+          <input #imageUser id="imageUser" name="imageUser" type="hidden" [value]="urlImage | async">
         </div>
 
         <div
@@ -37,7 +37,7 @@
           data-validate="name is required"
         >
           <span class="label-input100">Nombre: </span>
-          <input class="input100" type="text" placeholder="Escribe tu nombre" />
+          <input [(ngModel)]="nombre" name="nombre" id="nombre" class="input100" type="text" placeholder="Escribe tu nombre" />
           <span class="focus-input100" data-symbol="&#xf205;"></span>
         </div>
 
@@ -47,6 +47,9 @@
         >
           <span class="label-input100">Apellido: </span>
           <input
+            [(ngModel)]="apellido"
+            name="apellido"
+            id="apellido"
             class="input100"
             type="text"
             placeholder="Escribe tu apellido"
