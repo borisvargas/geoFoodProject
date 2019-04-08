@@ -18,10 +18,12 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 // modal
 import {FormsModule} from '@angular/forms';
 // googleMap
 import { AgmCoreModule } from '@agm/core';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 @NgModule({
@@ -34,7 +36,8 @@ import { AgmCoreModule } from '@agm/core';
     LoginComponent,
     SignUpComponent,
     NavbarComponent,
-    ExploreComponent
+    ExploreComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +46,7 @@ import { AgmCoreModule } from '@agm/core';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     AgmCoreModule.forRoot({ apiKey: 'AIzaSyBNRWW7vqg8E6TPvFFc3Tq6Exhga8U3dAU' }),
+    AngularFireStorageModule
   ],
   providers: [
     AngularFireAuth

@@ -1,12 +1,12 @@
 /* FOOTER */
 footer a {
-    font-size: 2em;
+    font-size: 1.5em;
     color: white;
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
     text-align: center;
-    line-height: 80px;
-    border-radius: 50%;
+    line-height: 40px;
+    border-radius: 40%;
     transition: 0.5s;
   }
   footer a:hover {
@@ -27,7 +27,4 @@ footer a {
   }
   .icon-whatsapp:hover {
       background: #075e54;
-  }
-  .repo {
-      font-size: 1em;
   }

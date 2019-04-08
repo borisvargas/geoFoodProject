@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
+import { AngularFireStorage } from '@angular/fire/storage';
+import { finalize } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-sign-up',
@@ -9,28 +12,45 @@ import { Router } from '@angular/router';
 })
 export class SignUpComponent implements OnInit {
 
-  constructor(private router: Router, private authService: AuthService) { }
+  constructor(private router: Router, private authService: AuthService, private storage: AngularFireStorage ) { }
   public nombre: string = '';
   public apellido: string = '';
   public correo: string = '';
   public image: string = '';
 
+  @ViewChild('imageUser') inputImageUser: ElementRef;
+
   public email: string = '';
   public password: string = '';
 
+  uploadPercent: Observable<number>;
+  urlImage: Observable<string>;
+
   ngOnInit() {
+  }
+  onUpLoad(event) {
+    // console.log(event.target.files[0]);
+    const id: string = Math.random().toString(36).substring(2);
+    const file = event.target.files[0];
+    const filePath = `uploads/profile_${id}`;
+    const ref = this.storage.ref(filePath);
+    const task = this.storage.upload(filePath, file);
+    this.uploadPercent = task.percentageChanges();
+    task.snapshotChanges().pipe( finalize(  () => this.urlImage = ref.getDownloadURL() )).subscribe();
   }
   onAddUser() {
     this.authService.registerUser(this.email, this.password).then( res => {
-      this.router.navigate(['explore']);
+      // console.log('userRes', res);
+      this.authService.isAuth().subscribe( user => {
+        if(user) {
+          user.updateProfile({
+            displayName: '',
+            photoURL: this.inputImageUser.nativeElement.value
+          }).then( () => { this.onLoginRedirect(); }).catch((error) => console.log(error));
+        }
+      });
     }).catch( err => console.log('err', err.message) );
   }
-  onLogin(): void {
-    this.authService.loginEmailUser(this.email, this.password).then( res => {
-      this.onLoginRedirect();
-    }).catch( err => console.log('err', err.message));
-  }
-
   onLoginGoogle(): void {
     this.authService.loginGoogleUser().then( res => {
       this.correo = res.additionalUserInfo.profile['email'];
