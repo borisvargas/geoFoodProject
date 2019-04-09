@@ -15,10 +15,14 @@ export class ExploreComponent implements OnInit {
   constructor( private dataApi: DataApiService ) {
   }
 
+  public restaurants = [];
+  public restaurant = '';
+
   ngOnInit() {
     this.toNavlink();
     this.dataApi.getAllRestaurants().subscribe( restaurants => {
-      console.log('restaurants', restaurants);
+      // console.log('restaurants', restaurants);
+      this.restaurants = restaurants;
     });
   }
 

@@ -25,6 +25,7 @@ import {FormsModule} from '@angular/forms';
 // googleMap
 import { AgmCoreModule } from '@agm/core';
 import { ProfileComponent } from './components/profile/profile.component';
+import { DetailsRestaurantComponent } from './components/details-restaurant/details-restaurant.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     SignUpComponent,
     NavbarComponent,
     ExploreComponent,
-    ProfileComponent
+    ProfileComponent,
+    DetailsRestaurantComponent
   ],
   imports: [
     BrowserModule,

@@ -17,6 +17,8 @@ export class DataApiService {
 
   private restaurantsCollection: AngularFirestoreCollection<RestaurantInterface>;
   private restaurants: Observable<RestaurantInterface[]>;
+  private restaurantDoc: AngularFirestoreDocument<RestaurantInterface>;
+  private restaurant: Observable<RestaurantInterface>;
 
   getAllRestaurants( ) {
     return this.restaurants = this.restaurantsCollection.snapshotChanges().pipe( map( changes => {
@@ -25,6 +27,18 @@ export class DataApiService {
         data.idRestaurante = action.payload.doc.id;
         return data;
       });
+    }));
+  }
+  getOneRestaurant(idRestaurant: string) {
+    this.restaurantDoc = this.afs.doc<RestaurantInterface>(`/restaurante/${idRestaurant}`);
+    return this.restaurant = this.restaurantDoc.snapshotChanges().pipe(map(action => {
+      if (action.payload.exists === false) {
+        return null;
+      } else {
+        const data = action.payload.data() as RestaurantInterface;
+        data.idRestaurante = action.payload.id;
+        return data;
+      }
     }));
   }
   addRestaurant() {

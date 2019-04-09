@@ -5,6 +5,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ContentComponent } from './components/content/content.component';
 import { ExploreComponent } from './components/explore/explore.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { DetailsRestaurantComponent } from './components/details-restaurant/details-restaurant.component';
 
 
 const APP_ROUTES: Routes = [
@@ -13,6 +14,7 @@ const APP_ROUTES: Routes = [
     { path: 'signUp', component: SignUpComponent},
     { path: 'explore', component: ExploreComponent },
     { path: 'profile', component: ProfileComponent },
+    { path: 'restaurante/:id', component: DetailsRestaurantComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'content' }
 ];
 export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES);
