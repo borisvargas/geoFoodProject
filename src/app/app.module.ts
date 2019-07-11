@@ -48,7 +48,7 @@ import { DetailsRestaurantComponent } from './components/details-restaurant/deta
     APP_ROUTING,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
-    AgmCoreModule.forRoot({ apiKey: 'AIzaSyBNRWW7vqg8E6TPvFFc3Tq6Exhga8U3dAU' }),
+    AgmCoreModule.forRoot({ apiKey: '#apiKeyGoogle' }),
     AngularFireStorageModule
   ],
   providers: [
